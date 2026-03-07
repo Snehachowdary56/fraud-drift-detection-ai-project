@@ -1,1 +1,1 @@
-# fraud-drift-detection-ai-project
+# fraud-drift-detection
