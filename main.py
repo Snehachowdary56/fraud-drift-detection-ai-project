@@ -1,10 +1,22 @@
 import pandas as pd
 
-# Load the CSV file
-data = pd.read_csv("data/creditcard1.csv")
+# Load dataset
+data = pd.read_csv("creditcard1.csv")
 
-# If you want X (features) and y (labels), assuming 'Class' is the label column
-X = data.drop(columns=['Class'])
-y = data['Class']
+# Display first few rows
+print("Dataset Preview:")
+print(data.head())
 
-print(X.shape, y.shape)
+# Check dataset shape
+print("\nDataset Shape:", data.shape)
+
+# Separate features and target variable
+X = data.drop(columns=["Class"])
+y = data["Class"]
+
+print("\nFeature Matrix Shape:", X.shape)
+print("Target Vector Shape:", y.shape)
+
+# Check class distribution
+print("\nFraud vs Non-Fraud Distribution:")
+print(y.value_counts())
